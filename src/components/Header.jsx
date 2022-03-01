@@ -1,15 +1,14 @@
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import CategoryButton from "./CategoryButton";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header className="flex items-center w-100 h-8 py-6 px-5 bg-white">
+    <header className="flex items-center w-full h-8 py-6 px-5 bg-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
-        className="w-8 h-8 mr-2 cursor-pointer"
+        className="w-[32px] h-[32px] mr-2 cursor-pointer flex-shrink-0"
       >
         <g>
           <circle fill="#FF4500" cx="10" cy="10" r="10"></circle>
@@ -21,7 +20,7 @@ const Header = () => {
       </svg>
 
       <svg
-        className="h-9 py-2 cursor-pointer"
+        className="h-9 py-2 mr-2 cursor-pointer hidden sm:flex flex-shrink-0"
         viewBox="0 0 57 18"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -36,9 +35,7 @@ const Header = () => {
         </g>
       </svg>
       {/* Home Icon for Categories */}
-      <div className="ml-5 w-40 border border-blue-200">
-        <FontAwesomeIcon icon={faHome} size="lg" />
-      </div>
+      <CategoryButton />
       <SearchBar />
       {/* Icons for Popular, All, Reddit live | Chat | Notifications | Create Post */}
       {/* Avatar dropdown */}
