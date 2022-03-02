@@ -11,12 +11,12 @@ const CategoryDropdown = ({ isActive }) => {
     { name: "category name 3", icon: "icon3", favorited: false, id: 6 },
   ];
   return (
-    <div className="absolute flex flex-col px-4 py-4 justify-centertop-9 left-0 right-0 w-100 max-h-96 bg-white outline-gray-200 roudned-md drop-shadow-sm overflow-y-scroll">
+    <div className="absolute px-4 py-4 justify-center top-10 max-h-96 left-0 right-0 w-100  bg-white outline-gray-200 roudned-md drop-shadow-sm overflow-y-scroll">
       <input
         type="text"
         autoFocus
         placeholder="Filter"
-        className={`border rounded-sm h-100 w-100 p-1 focus:outline-none hover:border-blue-500 ${
+        className={`border flex rounded-sm h-100 mb-4 max-h-20 w-full p-1 focus:outline-none hover:border-blue-500 ${
           isActive ? "border-blue-500" : ""
         }`}
       />

@@ -15,11 +15,11 @@ const SearchBar = () => {
   };
   return (
     <div
-      className={`relative m-2 border rounded-md h-100 w-80 p-1.5 hover:border-blue-500 ${
+      className={`relative m-2 border rounded-md h-100 w-full min-w-max max-w-8xl p-1.5 hover:border-blue-500 ${
         isActive ? "border-blue-500" : ""
       }`}
     >
-      <FontAwesomeIcon icon={faSearch} />
+      <FontAwesomeIcon icon={faSearch} className=""/>
       <input
         type="text"
         placeholder="Search Reddit"

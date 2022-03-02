@@ -1,3 +1,12 @@
+import {
+  faBell,
+  faCameraRetro,
+  faFire,
+  faHotdog,
+  faMessage,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import CategoryButton from "./CategoryButton";
 import SearchBar from "./SearchBar";
@@ -35,10 +44,45 @@ const Header = () => {
         </g>
       </svg>
       {/* Home Icon for Categories */}
-      <CategoryButton />
+      <CategoryButton category="category" />
       <SearchBar />
       {/* Icons for Popular, All, Reddit live | Chat | Notifications | Create Post */}
+      <div className="flex gap-2 ml-auto mx-2">
+        <FontAwesomeIcon
+          icon={faFire}
+          size="lg"
+          className="hover:bg-gray-200 p-1.5 hidden lg:flex"
+        />
+        <FontAwesomeIcon
+          icon={faHotdog}
+          size="lg"
+          className="hover:bg-gray-200 p-1.5 hidden lg:flex"
+        />
+        <FontAwesomeIcon
+          icon={faCameraRetro}
+          size="lg"
+          className="hover:bg-gray-200 p-1.5 hidden lg:flex"
+        />
+        <span className="text-2xl text-gray-200 hidden lg:flex">|</span>
+        <FontAwesomeIcon
+          icon={faMessage}
+          size="lg"
+          className="hover:bg-gray-200 p-1.5"
+        />
+        <FontAwesomeIcon
+          icon={faBell}
+          size="lg"
+          className="hover:bg-gray-200 p-1.5"
+        />
+        <FontAwesomeIcon
+          icon={faPlus}
+          light
+          size="lg"
+          className="hover:bg-gray-200 p-1.5"
+        />
+      </div>
       {/* Avatar dropdown */}
+      <CategoryButton />
     </header>
   );
 };
